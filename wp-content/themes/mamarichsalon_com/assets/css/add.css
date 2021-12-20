@@ -1,0 +1,11 @@
+.img-fit {
+  width: 120px;
+  height: 75px;
+  object-fit: cover;
+}
+
+.img-fit2 {
+  width: 360px;
+  height: 257px;
+  object-fit: cover;
+}

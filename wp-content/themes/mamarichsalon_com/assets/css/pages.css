@@ -1,0 +1,1093 @@
+/*===================================
+下層ページのCSS
+===================================*/
+/*
+blog.htmlとnews.html
+================================================ */
+
+/*--header-*/
+.under #header {
+  z-index: 100;
+  height: auto;
+  position: fixed;
+  z-index: 4;
+  background: #fff;
+  padding: 10px 0 10px 3.8vw;
+  box-shadow: 0 3px 4px 0 rgb(0 0 0 / 7%);
+}
+
+.header-bar h1 {
+  font-family: var(--pari);
+  font-size: calc((28 / 16)* 1em);
+}
+
+.under .header-area::before,
+.under .header-area::after {
+  content: none;
+}
+
+/*--page-head--*/
+.page-head {
+  height: 48vw;
+  width: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page-head img {
+  height: 48vw;
+  width: 100%;
+}
+
+.page-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  transform: translate(-50%, -50%);
+  color: var(--pink);
+}
+
+.page-title span {
+  display: block;
+  font-weight: normal;
+}
+
+.page-title .ttl-en {
+  font-family: var(--pari);
+  font-size: calc((36 / 16) * 1em);
+}
+
+.page-title .ttl-ja {
+  font-size: calc((12 / 16) * 1em);
+}
+
+@media (min-width:768px) {
+  .page-head {
+    height: 23.4vw;
+  }
+
+  .page-head img {
+    height: 23.4vw;
+  }
+}
+
+/*--breadcumb--*/
+.bread_crumb {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto 30px;
+}
+
+.bread_crumb li {
+  font-size: calc((14 / 16) * 1em);
+  float: left;
+  list-style: none outside none;
+}
+
+.bread_crumb li a::after {
+  content: '>';
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+.bread_crumb li:last-child::after {
+  content: '';
+}
+
+.bread_crumb li:last-child {
+  font-weight: var(--bold);
+}
+
+/*--main--*/
+.under main {
+  padding-top: 67px;
+}
+
+/*--blog--*/
+.ttl-list {
+  padding: 0 0 40px 0;
+}
+
+.ttl-item {
+  margin-bottom: 50px;
+}
+
+.ttl-item figure {
+  margin-bottom: 20px;
+}
+
+.ttl-item .release {
+  font-size: calc((12 / 16) * 1em);
+  margin-bottom: 3px;
+}
+
+.ttl-item h3 {
+  margin-bottom: 16px;
+  font-family: var(--mincho);
+  font-size: calc((20 / 16) * 1em);
+}
+
+.pager {
+  margin: 0 auto;
+}
+
+.pageList {
+  display: flex;
+  justify-content: center;
+}
+
+.page_navi {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.page_navi li {
+  margin: 0 6.5px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d0d0d0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.page_navi li.current {
+  color: #fff;
+  font-weight: bold;
+  padding: 3px 7px;
+  background: var(--pink);
+  border: solid 1px var(--pink);
+}
+
+.page_navi li:hover {
+  opacity: 0.8;
+}
+
+.page_navi li.page_nums span {
+  color: #fff;
+  padding: 3px 7px;
+  background: #666;
+  display: inline-block;
+  border: solid 1px #333;
+}
+
+@media (min-width:768px) {
+  .ttl-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .ttl-item {
+    width: 31.3%;
+  }
+}
+
+/*
+news_page.htmlとblog_page.html
+================================================ */
+article {
+  padding-bottom: 40px;
+}
+
+article .release {
+  font-size: calc((12 / 16) * 1em);
+  margin-bottom: 5px;
+}
+
+article h3 {
+  font-family: var(--mincho);
+  font-size: calc((20 / 16) * 1em);
+  margin-bottom: 20px;
+}
+
+article figure {
+  margin-bottom: 20px;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+/*--more-news--*/
+.more-news {
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-news .prev,
+.more-news .next {
+  padding: 3px 7px;
+  border: 1px solid #d0d0d0;
+}
+
+.more-news .prev a::before {
+  content: '<';
+  padding-right: 10px;
+}
+
+.more-news .next a::after {
+  content: '>';
+  padding-left: 10px;
+}
+
+/*
+profile.html
+================================================ */
+.under .profile {
+  background: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.under .profile-inner {
+  padding-top: 0;
+}
+
+/*
+company.html
+================================================ */
+.company-table {
+  width: 100%;
+  border-top: 1px solid #d0d0d0;
+}
+
+.company-table tr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #d0d0d0;
+  font-size: calc((14 / 16) * 1em);
+}
+
+.company-table td:first-child {
+  width: 20%;
+  font-weight: bold;
+}
+
+.company-table td:last-child {
+  will-change: 80%;
+}
+
+@media (min-width:768px) {
+  .company-table tr {
+    font-size: calc((16 / 16) * 1em);
+  }
+}
+
+/*
+lessons.html
+================================================ */
+.lesson-item {
+  margin-bottom: 60px;
+}
+
+.lesson-item img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width:768px) {
+  .lesson-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .lesson-item {
+    width: 48%;
+  }
+
+  .lesson-ttl h3 {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*
+講座各ページ共通
+================================================ */
+/*--ページ見出し--*/
+.ttl-level3 {
+  margin-bottom: 20px;
+}
+
+.ttl-level3 .ttl {
+  font-family: var(--mincho);
+  color: var(--brown);
+  font-size: calc((26 / 16) * 1em);
+  font-weight: var(--medium);
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+/*--講座の紹介文--*/
+.lesson-intro {
+  margin-bottom: 20px;
+  font-family: var(--mincho);
+  font-size: calc((18 / 16) * 1em);
+}
+
+@media (min-width:768px) {
+  .lesson-intro {
+    margin-bottom: 40px;
+  }
+}
+
+/*--小見出し--*/
+.ttl-level4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.ttl-level4::before,
+.ttl-level4::after {
+  content: "";
+  display: block;
+  flex-grow: 1;
+  border-top: 1px solid var(--darkgray);
+  transform: translateY(0);
+}
+
+.ttl-level4 .ttl {
+  margin: 0 15px;
+  font-size: calc((24 / 16)*1em);
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-family: var(--mincho);
+}
+
+@media (min-width:768px) {
+  .ttl-level4 {
+    margin-bottom: 50px;
+  }
+}
+
+/*--メリット--*/
+.merit-box {
+  padding: 18px 0 30px;
+  margin-bottom: 30px;
+}
+
+.merit-item {
+  position: relative;
+  padding: 30px 15px;
+  border: 1px solid var(--green);
+  margin-bottom: 48px;
+}
+
+.merit-item:last-child {
+  margin-bottom: 0;
+}
+
+.merit-ttl {
+  position: absolute;
+  top: -18px;
+  left: 15px;
+  background: var(--green);
+  color: #fff;
+  padding: 5px;
+  font-family: var(--mincho);
+  font-size: calc((16 / 16) * 1em);
+}
+
+.merit-subttl {
+  font-family: var(--mincho);
+  color: var(--brown);
+  font-size: calc((18 / 16) * 1em);
+  margin-bottom: 13px;
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 10px;
+}
+
+@media (min-width:768px) {
+  .merit-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .merit-item {
+    width: 31.3%;
+    margin-bottom: 0;
+  }
+
+  .merit-subttl {
+    margin-bottom: 20px;
+  }
+
+  .merit-half {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .merit-half .merit-item {
+    width: 48%;
+  }
+}
+
+/*--講座詳細--*/
+.lesson-detail{
+  padding-bottom: 60px;
+}
+.lesson-detail-list {
+  margin-bottom: 30px;
+}
+
+.lesson-detail-list>li {
+  padding: 30px 0;
+  border-top: 1px solid var(--l-gray);
+}
+
+.lesson-detail-list>li:last-child {
+  border-bottom: 1px solid var(--l-gray);
+}
+
+.lesson-detail-list>li dl dd li {
+  margin-bottom: 10px;
+}
+
+.lesson-detail dt {
+  margin-bottom: 20px;
+  font-weight: var(--bold);
+}
+
+@media (min-width:768px) {
+  .lesson-detail-list {
+    width: 98vw;
+    max-width: 800px;
+    margin: 0 auto 50px;
+  }
+
+  .lesson-detail-list dl {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lesson-detail-list dl dt {
+    width: 20%;
+    padding-left: 40px;
+    margin-bottom: 0;
+  }
+
+  .lesson-detail-list dl dd {
+    width: 75%;
+  }
+}
+
+/*--tokuten--*/
+.tokuten {
+  background: var(--l-green);
+  padding: 30px 3.8vw;
+  margin-top: 60px;
+}
+
+.tokuten .ttl-level4 {
+  margin-top: 0;
+}
+
+.tokuten .ttl-level4._tokuten .ttl {
+  color: var(--brown);
+}
+
+.tokuten .ttl-level4._tokuten::before,
+.tokuten .ttl-level4._tokuten::after {
+  border-top: 1px solid var(--brown);
+}
+
+.tokuten-inner-box {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px 3.8vw;
+}
+
+.tokuten-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.tokuten-inner-box h5 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: var(--brown);
+  font-size: calc((18 / 16)* 1em);
+  font-weight: var(--medium);
+  font-family: var(--mincho);
+  border-bottom: 1px solid var(--l-green);
+}
+@media (min-width:768px) {
+  .tokuten{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .tokuten-inner {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+/*--チェックボックス--*/
+.risk-item h6,
+.checkbox li{
+  position: relative;
+  padding-left: 1.7em;
+  font-size: calc((18 / 16)* 1em);
+  line-height: 1.5;
+}
+.checkbox li + li{
+  margin-top: 30px;
+}
+.risk-item h6::before,
+.checkbox li::before{
+  position: absolute;
+  left: 0;
+  content: "";
+  display: block;
+  width: 1.3em;
+  height: 1.3em;
+  border: 1px solid #707070;
+}
+.risk-item h6::after,
+.checkbox li::after{
+  position: absolute;
+  left: 0.2em;
+  top: 0.3em;
+  content: "";
+  display: block;
+  width: 1em;
+  height: 0.5em;
+  border-left: 4px solid var(--brown);
+  border-bottom: 4px solid var(--brown);
+  transform: rotate(-45deg);
+}
+/*--カッコ付き見出し--*/
+.brackets{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.brackets h4{
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-family: var(--mincho);
+  color: var(--brown);
+  font-weight: var(--medium);
+  font-size: calc((22 / 16)* 1em);
+  text-align: center;
+  display: inline-block;
+}
+@media (min-width:768px){
+  .brackets h4{
+    font-size: calc((28 / 16)* 1em);
+  }
+}
+.brackets h4::before,
+.brackets h4::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: inline-block;
+}
+
+.brackets h4::before {
+  border-left: solid 1px var(--brown);
+  border-top: solid 1px var(--brown);
+  top: 0;
+  left: 0;
+}
+
+.brackets h4::after {
+  border-right: solid 1px var(--brown);
+  border-bottom: solid 1px var(--brown);
+  bottom: 0;
+  right: 0;
+}
+/*
+asset.html
+================================================ */
+.asset .page-title {
+  color: var(--green);
+}
+
+.asset .ttl-level3 {
+  border-bottom: 1px solid var(--green);
+}
+
+.asset .ttl-level3 .ttl {
+  color: var(--green);
+}
+
+.lesson-balance {
+  text-align: center;
+  font-family: var(--mincho);
+  color: var(--brown);
+  font-weight: var(--medium);
+  margin-bottom: 30px;
+}
+
+.lesson-balance p.skill {
+  margin-bottom: 20px;
+  font-size: calc((22 / 16) * 1em);
+}
+
+.lesson-balance p.torikumi {
+  margin-top: 6px;
+  font-size: calc((18 / 16) * 1em);
+}
+
+@media (min-width:768px) {
+  .lesson-balance {
+    margin-bottom: 40px;
+  }
+
+  .lesson-balance figure {
+    margin: 0 auto;
+    max-width: 580px;
+    height: auto;
+  }
+
+  .lesson-balance .skill {
+    margin-bottom: 30px;
+    font-size: calc((32 / 16) * 1em);
+  }
+
+  .lesson-balance .torikumi {
+    margin-top: 30px;
+    font-size: calc((32 / 16) * 1em);
+  }
+}
+
+.asset .btn-block {
+  background-color: var(--green);
+}
+
+.asset .ttl-level4::before,
+.asset .ttl-level4::after {
+  border-top: 1px solid var(--green);
+}
+
+.asset .ttl-level4 .ttl {
+  color: var(--green);
+}
+
+/*--受講すると--*/
+.jukou figure {
+  display: none;
+}
+
+@media (min-width:768px) {
+  .jukou figure {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*--特典--*/
+.gentei {
+  font-size: calc((18 / 16)* 1em);
+}
+
+.return {
+  margin: 30px 0;
+  font-size: calc((26 / 16)* 1em);
+}
+
+/*--メッセージ--*/
+.message {
+  margin-bottom: 60px;
+}
+
+.message-box {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.message-box figure img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (min-width:768px){
+  .message-inner{
+    max-width: 800px;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .message-box{
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .message-box figure{
+    width: 47%;
+  }
+  .message-box p{
+    width: 47%;
+  }
+}
+/*
+online.html
+================================================ */
+.online .page-title {
+  color: var(--blue);
+}
+
+.online .ttl-level3 {
+  border-bottom: 1px solid var(--blue);
+}
+
+.online .ttl-level3 .ttl {
+  color: var(--blue);
+}
+.online .btn-block {
+  background: var(--blue);
+}
+.online .ttl-level4::before,
+.online .ttl-level4::after {
+  border-top: 1px solid var(--blue);
+}
+
+.online .ttl-level4 .ttl {
+  color: var(--blue);
+}
+.online .tokuten{
+  background: var(--l-blue);
+}
+.risks{
+  margin-top: 40px;
+}
+
+.risks .checkbox{
+  margin-bottom: 40px;
+}
+@media (min-width:768px) {
+  .risks {
+    margin-top: 70px;
+  }
+  .risks .checkbox {
+    max-width: 500px;
+    margin: 50px auto 60px;
+  }
+}
+.highrisk{
+  text-align: center;
+  color: var(--brown);
+  font-weight: var(--medium);
+  font-size: calc((22 / 16)* 1em);
+  font-family: var(--mincho);
+  margin-bottom: 40px;
+}
+.risk-box{
+  margin-bottom: 40px;
+}
+
+.risk-box .risk-item + .risk-item{
+  margin-top: 50px;
+}
+.risk-item h6{
+  margin-bottom: 20px;
+  font-weight: var(--medium);
+  font-size: calc((20 / 16)* 1em);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--blue);
+}
+.risk-item-inner figure{
+  margin-bottom: 10px;
+}
+@media (min-width:768px) {
+  .risk-box {
+    max-width: 780px;
+    margin: 0 auto 80px;
+  }
+
+  .risk-item-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .risk-item-inner figure {
+    width: 48%;
+  }
+
+  .risk-item-inner p {
+    width: 48%;
+  }
+}
+.kaihi{
+  padding: 20px 12px;
+  border: 4px solid var(--blue);
+  margin-bottom: 30px;
+}
+.kaihi p + p{
+  margin-top: 36px;
+}
+@media (min-width:768px){
+  .kaihi{
+    max-width:800px;
+    width: 80vw;
+    margin: 0 auto 30px;
+    padding: 40px 90px;
+  }
+}
+/*
+insta.html
+================================================ */
+.insta .page-title {
+  color: var(--purple);
+}
+
+.insta .ttl-level3 {
+  border-bottom: 1px solid var(--purple);
+}
+
+.insta .ttl-level3 .ttl {
+  color: var(--purple);
+}
+
+.insta .btn-block {
+  background: var(--purple);
+}
+
+.insta .ttl-level4::before,
+.insta .ttl-level4::after {
+  border-top: 1px solid var(--purple);
+}
+
+.insta .ttl-level4 .ttl {
+  color: var(--purple);
+}
+
+.insta .tokuten {
+  background: var(--l-purple);
+}
+.insta-box{
+  border: 3px solid var(--purple);
+  padding: 20px 12px 30px;
+  position: relative;
+}
+.insta-box:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -20px;
+  border: 20px solid transparent;
+  border-top: 20px solid var(--purple);
+}
+
+.insta-box p {
+  margin: 0;
+  padding: 0;
+}
+.insta-box .zero{
+  font-weight: var(--medium);
+  font-family: var(--basic);
+  color: var(--purple);
+}
+.insta-box .toroku{
+  margin-bottom: 10px;
+  font-family: var(--mincho);
+  font-size: calc((20 / 16)* 1em);
+  font-weight: var(--bold);
+  color: var(--purple);
+  border-bottom: 2px dotted var(--purple);
+}
+.insta-box .yusen{
+  color: var(--darkgray);
+  font-family: var(--basic);
+}
+@media (min-width:768px){
+  .insta-box{
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .insta-box .toroku {
+    font-size: calc((24 / 16)* 1em);
+  }
+}
+.insta .tokuten-inner-box h5{
+  border-bottom: 1px solid var(--purple);
+}
+.insta .merit-item {
+  border: 1px solid var(--purple);
+}
+.insta .merit-ttl{
+  background: var(--purple);
+}
+.merit-detail p + p{
+  margin-top: 20px;
+}
+.insta .merit-subttl{
+  border-bottom: 1px solid var(--purple);
+}
+
+/*
+construct.html
+================================================ */
+.construct .page-title {
+  color: var(--orange);
+}
+
+.construct .ttl-level3 {
+  border-bottom: 1px solid var(--orange);
+}
+
+.construct .ttl-level3 .ttl {
+  color: var(--orange);
+}
+
+.construct .btn-block {
+  background: var(--orange);
+}
+
+.construct .ttl-level4::before,
+.construct .ttl-level4::after {
+  border-top: 1px solid var(--orange);
+}
+
+.construct .ttl-level4 .ttl {
+  color: var(--orange);
+}
+
+.kaiketsu {
+  padding: 20px 12px;
+  border: 3px solid var(--orange);
+  margin-bottom: 30px;
+}
+.kaiketsu-top{
+  margin-bottom: 10px;
+  color: var(--brown);
+  font-size: calc((20 / 16)* 1em);
+  font-weight: var(--medium);
+  font-family: var(--mincho);
+}
+.kaiketsu-inner figure{
+  margin-bottom: 10px;
+}
+@media (min-width:768px) {
+  .kaiketsu {
+    max-width: 800px;
+    width: 80vw;
+    margin: 0 auto 30px;
+    padding: 40px;
+  }
+  .kaiketsu-top{
+    margin-bottom: 30px;
+  }
+  .kaiketsu-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  .kaiketsu-inner figure{
+    width: 48%;
+  }
+  .kaiketsu-inner p{
+    width: 48%;
+  }
+}
+.web-lessons{
+  margin-top: 60px;
+}
+.web-lessons header.lesson-top{
+  margin-bottom: 20px;
+  padding: 38px 0;
+  background: var(--l-orange);
+}
+.web-lessons header.lesson-top + p{
+  margin-bottom: 40px;
+}
+.web-lessons header h4{
+  text-align: center;
+  color: var(--brown);
+  font-size: calc((20 / 16)* 1em);
+  font-family: var(--mincho);
+}
+.web-lesson-item h5{
+  border-bottom: 1px solid var(--orange);
+  font-size: calc((22 / 16)* 1em);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-family: var(--mincho);
+  color: var(--brown);
+}
+.web-lesson-item h5 span{
+  display: block;
+  font-size: calc((14 / 16)* 1em);
+}
+.web-lesson-item ul{
+  margin-bottom: 20px;
+}
+@media (min-width:768px){
+  .web-lesson-item ul {
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+}
+.web-lesson-item li{
+  font-size: calc((20 / 16)* 1em);
+  line-height: 2;
+  font-weight: var(--bold);
+}
+.web-lesson-inner{
+  margin-bottom: 40px;
+}
+.web-lesson-inner figure{
+  margin-bottom: 10px;
+}
+@media (min-width:768px){
+  .web-lesson-inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .web-lesson-inner figure{
+    width: 48%;
+  }
+  .web-lesson-inner p{
+    width: 48%;
+  }
+}
+.construct .merit-box{
+  padding: 0;
+}
+.construct .merit-item{
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+@media (min-width:768px){
+.construct .merit-item {
+  margin-bottom: 30px;
+  }
+}
+.construct .merit-item{
+  border: 1px solid var(--orange);
+}
+.construct .merit-ttl {
+  background: var(--orange);
+}
+.construct .merit-subttl {
+  border-bottom: 1px solid var(--orange);
+}
+.web-lessons .merit-half{
+  margin-bottom: 0;
+}
