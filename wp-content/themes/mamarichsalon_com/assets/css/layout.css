@@ -242,8 +242,8 @@ header：トップ画面
   position: relative;
   width: 70vw;
   left: 50%;
-  top: 65%;
-  transform: translate(-50%, -65%);
+  top: 70%;
+  transform: translate(-50%, -70%);
   z-index: 2;
   /*padding: 50px 45px 35px;*/
   padding: 50px 0 35px;
