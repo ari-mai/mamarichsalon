@@ -111,7 +111,11 @@ header
   width: 50px;
   height: 50px;
 }
-
+@media (min-width:900px) {
+  .openbtn{
+    display: none;
+  }
+}
 /*ボタン内側*/
 
 .openbtn span {
