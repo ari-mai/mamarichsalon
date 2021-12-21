@@ -237,15 +237,18 @@ area：レイアウト
 /*
 header：トップ画面
 ================================================ */
+#wrapper{
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+}
 .header-area {
-  /*position: fixed;*/
   position: relative;
-  width: 70vw;
+  width: 80vw;
   left: 50%;
-  top: 70%;
-  transform: translate(-50%, -70%);
+  top: 53%;
+  transform: translate(-50%, -53%);
   z-index: 2;
-  /*padding: 50px 45px 35px;*/
   padding: 50px 0 35px;
   color: #707070;
   text-align: center;
@@ -312,16 +315,9 @@ header：トップ画面
   }
 }
 /* gnavi */
-
-#g-nav-list li:nth-of-type(1) a {
-  font-size: calc((40 / 16)*1em);
-  text-transform: none;
-  font-weight: normal;
-  line-height: 1;
-  white-space: nowrap;
-  margin: 0 0 44px 0;
-  font-family: var(--pari);
-  letter-spacing: 0;
+.logo a{
+	font-size: calc((40 / 16)*1em);
+	font-family: var(--pari);
 }
 /*
 intro：サイトの紹介文
