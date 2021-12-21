@@ -318,6 +318,7 @@ header：トップ画面
 .logo a{
 	font-size: calc((40 / 16)*1em);
 	font-family: var(--pari);
+	padding-left:30px;
 }
 /*
 intro：サイトの紹介文
