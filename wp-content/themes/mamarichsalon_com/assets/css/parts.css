@@ -2,100 +2,147 @@
 /*
 header
 ================================================ */
-#header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-#header-img {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  /*以下画面で背景画像を表示させるための指定*/
-  width: 100%;
-  height: 100vh;
-  background: url("../img/main.jpg") no-repeat top center;
-  background-size: cover;
-  transform-origin: center;
-}
-@media (min-width:768px) {
-  #header-img{
-    background: url("../img/main_pc.jpg") no-repeat top center;
-    background-size: cover;
-    transform-origin: center;
-  }
-}
 /*========= ナビゲーションのためのCSS ===============*/
-
-#g-nav {
-  position: fixed;
-  z-index: -1;
-  opacity: 0;
-  /*はじめは透過0*/
-  /*ナビの位置と形状*/
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  /*ナビの高さ*/
-  background: rgba(255, 233, 229, .83);
-  /*背景を少し透過させる*/
-  /*動き*/
-  transition: all 0.3s;
+#header{
+	padding: 5px 0 5px 50px;
 }
-
+#g-nav {
+	position: fixed;
+	z-index: -1;
+	opacity: 0;
+	/*はじめは透過0*/
+	/*ナビの位置と形状*/
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	/*ナビの高さ*/
+	background: rgba(255, 233, 229, .83);
+	/*背景を少し透過させる*/
+	/*動き*/
+	transition: all 0.3s;
+}
 /*アクティブクラスがついたら透過なしにして最前面へ*/
 #g-nav.panelactive {
-  opacity: 1;
-  z-index: 999;
+	opacity: 1;
+	z-index: 999;
 }
 
 /*ナビゲーションの縦スクロール*/
 #g-nav.panelactive #g-nav-list {
-  /*ナビの数が増えた場合縦スクロール*/
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100vh;
-  /*表示する高さ*/
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+	/*ナビの数が増えた場合縦スクロール*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 /*ナビゲーション*/
 #g-nav ul {
-  display: none;
-  /*はじめは非表示*/
-  /*ナビゲーション天地中央揃え*/
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	display: none;
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #g-nav.panelactive ul {
-  display: block;
+	display: block;
 }
 
 /*リストのレイアウト設定*/
 
 #g-nav li {
-  list-style: none;
-  text-align: center;
-  font-family: var(--bask);
+	list-style: none;
+	text-align: center;
+	font-family: var(--bask);
 }
 
 #g-nav li a {
-  color: var(--darkgray);
-  text-decoration: none;
-  padding: 20px;
-  display: block;
-  letter-spacing: 0.1em;
-  font-family: var(--bask);
-  font-size: calc((18 / 16)*1em);
-
+	color: var(--darkgray);
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+	letter-spacing: 0.1em;
+	font-family: var(--bask);
+	font-size: calc((18 / 16)*1em);
 }
+@media (min-width:900px){
+	#header{
+		height: 70px;
+		width: 100vw;
+		position: fixed;
+		z-index: 999;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	#g-nav {
+		position: fixed;
+		z-index: 999;
+		opacity: 1;
+		/*はじめは透過0*/
+		/*ナビの位置と形状*/
+		top: 0;
+		/*width: 100vw;*/
+		height: 70px;
+		/*ナビの高さ*/
+		background-color: transparent;
+	}
+	#g-nav ul {
+		display: flex;
+		position:absolute;
+		z-index: 999;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#g-nav-list ul{
+		display: flex;
+		font-family: var(--bask);
+		font-size: 1em;
+	}
+	#g-nav-list ul li{
+		font-size: calc((14 / 16)*1em);
+	}
+	#g-nav-list ul li + li{
+		margin-left: 30px;
+	}
+	#g-nav li a {
+		padding: 0px;
+		font-family: var(--bask);
+		/*font-size: calc((16 / 16)*1em);*/
+	}
+}
+/*
+トップの背景画像
+================================================ */
+#visual-area{
+	position: relative;
+	height: 100vh;
+}
+#header-img{
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: -1;
+	background: url("../img/main.jpg") no-repeat top center;
+	background-size: cover;
+	transform-origin: center;
+}
+@media (min-width:768px) {
+	#header-img{
+		background: url("../img/main_pc.jpg") no-repeat top center;
+		background-size: cover;
+		transform-origin: center;
+	}
+}
+
 /*==================================================
 ハンバーガーメニュー ボタン：2本線が×に
 ===================================*/
@@ -111,11 +158,7 @@ header
   width: 50px;
   height: 50px;
 }
-@media (min-width:900px) {
-  .openbtn{
-    display: none;
-  }
-}
+
 /*ボタン内側*/
 
 .openbtn span {
@@ -152,6 +195,11 @@ header
   left: 16px;
   transform: translateY(-6px) rotate(45deg);
   width: 35%;
+}
+@media (min-width:900px){
+	.openbtn{
+		display: none;
+	}
 }
 /*==================================================
 トップ画面 丸が動いてスクロールを促す
