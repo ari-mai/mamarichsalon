@@ -326,15 +326,38 @@ intro：サイトの紹介文
 .intro{
   padding: 50px 0;
   background-color: var(--l-pink);
+}
+.intro p{
   font-family: var(--mincho),
   serif;
   font-weight: var(--bold);
   letter-spacing: .1em;
+  position: relative;
+  text-align: center;
+}
+.inner p::before{
+content: attr(data-en);
+position: absolute;
+transform: rotate(-10deg);
+top: -18px;
+left: 8%;
+color: var(--l-orange);
+font-size: calc((34 / 16) *1em);
+font-family: var(--pari);
+}
+.inner p span {
+  position: relative;
+  z-index: 2;
+  font-size: calc((20 / 16)*1em);
 }
 @media (min-width:768px) {
-  .intro{
-    text-align: center;
-    font-size: calc((24 / 16)*1em);
+  .intro p span{
+    font-size: calc((24 / 16) *1em);
+  }
+  .inner p::before {
+    top: -32px;
+    left: 15%;
+    font-size: calc((38 / 16) *1em);
   }
 }
 /*
